@@ -1,4 +1,4 @@
-# drink-ordering-fb
+# app-drink-fb
 
 飲料訂購系統 (Drink Ordering System)。
 
@@ -84,7 +84,7 @@ python -m http.server 4173
 
 | 店家 | 分享網址 |
 |---|---|
-| 50嵐 | `https://changyiwu.github.io/drink-ordering-fb/50lan.html` |
+| 50嵐 | `https://changyiwu.github.io/app-drink-fb/50lan.html` |
 | 清心福全 | `.../chingshin.html` |
 | CoCo 都可 | `.../coco.html` |
 | 鮮茶道 | `.../presotea.html` |
@@ -99,7 +99,7 @@ query 參數產生 OG 標籤，爬蟲也不會執行 JS。
 ## 首頁 QR Code
 
 首頁下方的「分享這個頁面」區塊放的是 `images/qr_home.svg`，離線產生的靜態向量圖，
-不依賴任何線上產圖服務。內容為首頁網址 `https://changyiwu.github.io/drink-ordering-fb/`。
+不依賴任何線上產圖服務。內容為首頁網址 `https://changyiwu.github.io/app-drink-fb/`。
 
 點一下 QR 會用原生 `<dialog>` 放大（桌機 380px、手機吃滿寬度）。之所以用原生元素而不是
 自刻 overlay：Esc 關閉、焦點鎖在對話框內、關閉後焦點退回原按鈕、背景 `inert` 全部由
@@ -111,7 +111,7 @@ query 參數產生 OG 標籤，爬蟲也不會執行 JS。
 
 ```bash
 python -m pip install qrcode
-python -c "import qrcode; from qrcode.image.svg import SvgPathImage; qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, border=2); qr.add_data('https://changyiwu.github.io/drink-ordering-fb/'); qr.make(fit=True); qr.make_image(image_factory=SvgPathImage).save('images/qr_home.svg')"
+python -c "import qrcode; from qrcode.image.svg import SvgPathImage; qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, border=2); qr.add_data('https://changyiwu.github.io/app-drink-fb/'); qr.make(fit=True); qr.make_image(image_factory=SvgPathImage).save('images/qr_home.svg')"
 ```
 
 產生後要手動補兩件事（`qrcode` 不會產生）：把 `width`／`height` 的 `mm` 單位改成
@@ -137,7 +137,7 @@ python -c "import qrcode; from qrcode.image.svg import SvgPathImage; qr = qrcode
 `source/` 內兩張原圖都請勿刪除——上列所有 banner 衍生檔都已裁掉上下，
 那個裁切不可逆。要換裁切比例或做方形分享圖時只能從原圖重新產生。
 
-現行 banner 由 `agent-draw` 技能以 gpt-image-2 生成（無文字，四杯飲品置中排列，
+現行 banner 由 `draw` 技能以 gpt-image-2 生成（無文字，四杯飲品置中排列，
 刻意讓杯體只佔畫面高度約三分之一、上下留白），再從 `drink_banner_v2.png`
 以杯體中心（y≈605）為準裁 1536×461，放大至 1600×480。
 

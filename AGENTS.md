@@ -1,4 +1,4 @@
-# drink-ordering-fb（專案藍圖）
+# app-drink-fb（專案藍圖）
 
 > 本檔為跨 Agent 通用的專案藍圖（AGENTS.md 開放標準）。任何 Agent 的每個 session 都應先讀本檔＋`handoff.md`。
 
@@ -28,7 +28,7 @@
 ## 資料夾結構
 
 ```
-drink-ordering-fb/
+app-drink-fb/
 ├─ index.html          # 訂購主頁
 ├─ shop.html           # 店家頁
 ├─ shop.js             # 店家頁邏輯
@@ -50,8 +50,8 @@ drink-ordering-fb/
 | 層級 | 平台 | 位置 | 讀取時機 |
 |------|------|------|---------|
 | L1 | 本地（GDrive） | `AGENTS.md`＋`handoff.md` | 每個 session |
-| L2 | GitHub | https://github.com/changyiwu/drink-ordering-fb （公開） | 指定時 |
-| L3 | Obsidian | `drink-ordering-fb/專案工作流程.md` | 有需要時 |
+| L2 | GitHub | https://github.com/changyiwu/app-drink-fb （公開） | 指定時 |
+| L3 | Obsidian | `app-drink-fb/專案工作流程.md` | 有需要時 |
 
 ## 三個檔案的職責（依「時效性」分家，不是依「詳細程度」）
 

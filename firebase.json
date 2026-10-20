@@ -14,12 +14,12 @@
     "redirects": [
       {
         "source": "/",
-        "destination": "https://changyiwu.github.io/drink-ordering-fb/",
+        "destination": "https://changyiwu.github.io/app-drink-fb/",
         "type": 302
       },
       {
         "source": "/:path*",
-        "destination": "https://changyiwu.github.io/drink-ordering-fb/:path",
+        "destination": "https://changyiwu.github.io/app-drink-fb/:path",
         "type": 302
       }
     ],
